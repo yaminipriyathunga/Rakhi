@@ -3,38 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Happy Raksha Bandhan ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #071a4f, #0b4d7a);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+<body>
 
-    .container {
-      padding: 30px;
-    }
+  <!-- BROTHERS GALLERY -->
+  <div class="container" id="galleryScreen">
 
-    h1 {
-      font-size: 38px;
-      color: #ffd166;
-    }
+    <h1>Happy Raksha Bandhan ❤️</h1>
 
-    p {
-      font-size: 18px;
-    }
+    <p class="subtitle">
+      My Dear Brothers ✨
+    </p>
+<p class="tap-hint">
+  ✨ Tap on your photo for a special surprise ❤️ ✨
+</p>
+    <div class="gallery">
 
-    button {
-      margin-top: 25px;
-      padding: 15px 28px;
+      <!-- 1 - Eldest -->
+      <div class="brother-card"
+        onclick="selectBrother(
+          'My Eldest Brother ❤️',
+          'Screenshot_20230510_204021.jpg',
+          'Happy Raksha Bandhan! You will always have a special place in my heart ❤️'
+        )">
+        <img src="Screenshot_20230510_204021.jpg" alt="Eldest Brother">
+        <p>My Eldest Brother ❤️</p>
+      </div>
+
+      <!-- 2 -->
+      <div class="brother-card"
+        onclick="selectBrother(
+          'My Second Brother ❤️',
+          'IMG_20240606_053901_120.jpg',
+          'Happy Raksha Bandhan! Wishing you lots of happiness, success and beautiful memories ❤️'
+        )">
+        <img src="IMG_20240606_053901_120.jpg" alt="Second Brother">
+        <p>My Second Brother ❤️</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="brother-card"
+        onclick="selectBrother(
+          'My Brother ❤️',
+          'IMG-20221005-WA0030.jpg',
+          'Happy Raksha Bandhan! May you always be happy and successful ❤️'
+        )">
+        <img src="IMG-20221005-WA0030.jpg" alt="Brother">
+        <p>My Brother ❤️</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="brother-card"
+        onclick="selectBrother(
+          'My Brother ❤️',
+          'IMG_20241016_151241.jpg',
+          'Wishing you a very Happy Raksha Bandhan ❤️'
+        )">
+        <img src="IMG_20241016_151241.jpg" alt="Brother">
+        <p>My Brother ❤️</p>
+      </div>
+
+      <!-- 5 -->
+      <div class="brother-card"
+        onclick="selectBrother(
+          'My Brother ❤️',
+          'Screenshot_20240427_052435.jpg',
+          'Happy Raksha Bandhan! Keep smiling always ❤️'
+        )">
+        <img src="Screenshot_20240427_052435.jpg" alt="Brother">
+        <p>My Brother ❤️</p>
+      </div>
+
+      <!-- 6 -->
+      <div class="brother-card"
+        onclick="selectBrother(
+          'My Brother ❤️',
+          'Screenshot_20260822_150038.jpg',
+          'May this Raksha Bandhan bring you lots of happiness ❤️'
+        )">
+        <img src="Screenshot_20260822_150038.jpg" alt="Brother">
+        <p>My Brother ❤️</p>
+      </div>
+
+      <!-- 7 -->
+      <div class="brother-card"
+        onclick="selectBrother(
+          'My Brother ❤️',
+          'IMG_20260823_164054.jpg',
+          'Happy Raksha Bandhan to my wonderful brother ❤️'
+        )">
+        <img src="IMG_20260823_164054.jpg" alt="Brother">
+        <p>My Brother ❤️</p>
+      </div>
+
+      <!-- 8 -->
+      <div class="brother-card"
+        onclick="selectBrother(
+          'My Brother ❤️',
+          'IMG_20260823_164134.jpg',
+          'Always stay happy and blessed. Happy Raksha Bandhan ❤️'
+        )">
+        <img src="IMG_20260823_164134.jpg" alt="Brother">
+        <p>My Brother ❤️</p>
+      </div>
+
+      <!-- 9 -->
+      <div class="brother-card"
+        onclick="selectBrother(
+          'My Brother ❤️',
+          'IMG-20230210-WA0004.jpg',
+          'Sending you lots of love this Raksha Bandhan ❤️'
+        )">
+        <img src="IMG-20230210-WA0004.jpg" alt="Brother">
+        <p>My Brother ❤️</p>
+      </div>
+
+      <!-- 10 - Youngest -->
+      <div class="brother-card"
+        onclick="selectBrother(
+          'My Youngest Brother ❤️',
+          'IMG_20260823_164041.jpg',
+          'Happy Raksha Bandhan! You are very special ❤️'
+        )">
+        <img src="IMG_20260823_164041.jpg" alt="Youngest Brother">
+        <p>My Youngest Brother ❤️</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- SELECTED PHOTO SCREEN -->
+  <div id="selectedScreen">
+
+    <img id="selectedPhoto"
+         class="selected-photo"
+         src=""
+         alt="Selected Brother">
+
+    <h2 id="selectedName"></h2>
+
+    <button class="next-btn" onclick="showMessage()">
+      Continue ❤️
+    </button>
+
+  </div>
+
+
+  <!-- RAKHI MESSAGE SCREEN -->
+  <div id="messageScreen">
+
+    <img src="rakhi-scene.jpg"
+         class="rakhi-scene"
+         alt="Raksha Bandhan">
+
+    <div class="message-box" id="specialMessage"></div>
+
+    <button class="back-btn" onclick="goBack()">
+      ← Back to Gallery
+    </button>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>      padding: 15px 28px;
       border: none;
       border-radius: 30px;
       background: #f4b400;
