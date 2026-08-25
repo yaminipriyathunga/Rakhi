@@ -6,22 +6,33 @@
 
 body {
     font-family: Georgia, "Times New Roman", serif;
-
     min-height: 100vh;
 
     background:
-        radial-gradient(circle at 10% 10%, rgba(255, 210, 120, 0.35), transparent 25%),
-        radial-gradient(circle at 90% 20%, rgba(255, 150, 170, 0.25), transparent 25%),
-        radial-gradient(circle at 50% 100%, rgba(255, 190, 100, 0.25), transparent 30%),
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255, 210, 120, 0.35),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(255, 150, 170, 0.25),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(255, 190, 100, 0.25),
+            transparent 30%
+        ),
         #fff7ed;
 
     color: #6b2635;
 }
 
 
-/* =========================
+/* =================================
    MAIN PAGE
-========================= */
+================================= */
 
 #mainPage {
     width: 100%;
@@ -31,7 +42,9 @@ body {
 }
 
 
-/* HEADER */
+/* =================================
+   HEADER
+================================= */
 
 .main-header {
     text-align: center;
@@ -60,9 +73,9 @@ body {
 }
 
 
-/* =========================
+/* =================================
    BROTHERS GRID
-========================= */
+================================= */
 
 .brothers-grid {
     width: 100%;
@@ -79,7 +92,9 @@ body {
 }
 
 
-/* PHOTO CARD */
+/* =================================
+   INDIVIDUAL PHOTO CARD
+================================= */
 
 .brother-card {
     width: 100%;
@@ -90,7 +105,7 @@ body {
 
     border-radius: 25px;
 
-    background: #f8dfc4;
+    background: #f3d7bd;
 
     border: 3px solid rgba(151, 62, 78, 0.15);
 
@@ -106,24 +121,26 @@ body {
 
 
 /*
-   IMPORTANT:
+   COVER makes every photo completely
+   fill the square.
 
-   contain = full photo visible.
-   So faces won't get cut when original
-   photo is portrait/rectangle.
+   No empty peach space.
 */
 
 .brother-card img {
     width: 100%;
+
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
 
-    background: #f3d7bd;
+    object-position: center center;
 
     display: block;
 }
 
+
+/* Tap effect */
 
 .brother-card:active {
     transform: scale(0.96);
@@ -133,9 +150,9 @@ body {
 }
 
 
-/* =========================
-   RAKHI PAGE
-========================= */
+/* =================================
+   RAKHI DETAIL PAGE
+================================= */
 
 #rakhiPage {
     display: none;
@@ -145,8 +162,16 @@ body {
     padding: 30px 18px 40px;
 
     background:
-        radial-gradient(circle at 20% 15%, rgba(255, 210, 120, 0.35), transparent 25%),
-        radial-gradient(circle at 80% 25%, rgba(255, 150, 170, 0.25), transparent 25%),
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(255, 210, 120, 0.35),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(255, 150, 170, 0.25),
+            transparent 25%
+        ),
         #fff7ed;
 }
 
@@ -162,6 +187,8 @@ body {
 }
 
 
+/* Rakhi icon */
+
 .detail-rakhi-symbol {
     font-size: 42px;
 
@@ -169,7 +196,9 @@ body {
 }
 
 
-/* RAKHI PHOTO */
+/* =================================
+   RAKHI PHOTO
+================================= */
 
 #rakhiPhoto {
     width: 100%;
@@ -193,7 +222,9 @@ body {
 }
 
 
-/* MESSAGE */
+/* =================================
+   RAKHI MESSAGE
+================================= */
 
 .rakhi-content h1 {
     font-size: 30px;
@@ -215,7 +246,9 @@ body {
 }
 
 
-/* BACK BUTTON */
+/* =================================
+   BACK BUTTON
+================================= */
 
 .rakhi-content button {
     border: none;
@@ -248,14 +281,15 @@ body {
 }
 
 
-/* =========================
-   SMALL PHONES
-========================= */
+/* =================================
+   SMALL MOBILE PHONES
+================================= */
 
 @media (max-width: 380px) {
 
     #mainPage {
         padding-left: 12px;
+
         padding-right: 12px;
     }
 
@@ -274,4 +308,4 @@ body {
     .rakhi-content h1 {
         font-size: 26px;
     }
-  }
+    }
