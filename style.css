@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+/* =========================
+   BROTHERS GALLERY
+   ========================= */
+
 .container {
   min-height: 100vh;
   padding: 25px 15px;
@@ -25,7 +29,28 @@ h1 {
 
 .subtitle {
   color: #fff4c2;
-  margin-bottom: 30px;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.tap-hint {
+  font-size: 15px;
+  color: #ffd166;
+  margin-top: 8px;
+  margin-bottom: 25px;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.6;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .gallery {
@@ -35,6 +60,144 @@ h1 {
   max-width: 700px;
   margin: auto;
 }
+
+.brother-card {
+  position: relative;
+  cursor: pointer;
+  border: 3px solid #f7b733;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #123b70;
+  box-shadow: 0 0 15px rgba(255, 190, 50, 0.5);
+  transition: transform 0.3s;
+}
+
+.brother-card:active {
+  transform: scale(0.95);
+}
+
+.brother-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.brother-card p {
+  margin: 0;
+  padding: 10px 5px;
+  font-weight: bold;
+  color: #ffd166;
+  font-size: 14px;
+}
+
+
+/* =========================
+   SELECTED PHOTO SCREEN
+   ========================= */
+
+#selectedScreen {
+  display: none;
+  min-height: 100vh;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.selected-photo {
+  width: min(85vw, 380px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 5px solid #ffd166;
+  border-radius: 25px;
+  box-shadow: 0 0 25px #ffb703;
+  margin-top: 40px;
+}
+
+#selectedName {
+  color: #ffd166;
+  font-size: 26px;
+  margin-top: 20px;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.next-btn,
+.back-btn {
+  margin: 25px 8px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  background: #ffd166;
+  color: #14213d;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.next-btn:active,
+.back-btn:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================
+   RAKHI MESSAGE SCREEN
+   ========================= */
+
+#messageScreen {
+  display: none;
+  min-height: 100vh;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.rakhi-scene {
+  width: min(100%, 500px);
+  border-radius: 25px;
+  margin-top: 15px;
+  box-shadow: 0 0 20px rgba(255, 209, 102, 0.5);
+}
+
+.message-box {
+  background: #fff4d6;
+  color: #6b2d1a;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.6;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   MOBILE IMPROVEMENT
+   ========================= */
+
+@media (max-width: 380px) {
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .gallery {
+    gap: 12px;
+  }
+
+  .brother-card p {
+    font-size: 12px;
+  }
+
+  .tap-hint {
+    font-size: 13px;
+  }
+}}
 
 .brother-card {
   position: relative;
