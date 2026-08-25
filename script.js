@@ -1,22 +1,89 @@
-function selectBrother(name, photo, message) {
-  document.querySelector(".container").style.display = "none";
-  document.getElementById("selectedScreen").style.display = "block";
+const rakhiPhotos = {
 
-  document.getElementById("selectedPhoto").src = photo;
-  document.getElementById("selectedName").innerText = name;
+  1: "IMG-20260822-WA3233.jpg",
 
-  window.currentMessage = message;
+  2: "IMG-20260822-WA1913.jpg",
+
+  3: "IMG-20260822-WA8053.jpg",
+
+  4: "IMG-20260822-WA0358.jpg",
+
+  5: "IMG-20260822-WA4514.jpg",
+
+  6: "IMG-20260822-WA3282.jpg",
+
+  7: "IMG-20260822-WA8037.jpg",
+
+  8: "IMG-20260822-WA0121.jpg",
+
+  9: "IMG-20260822-WA0559.jpg",
+
+  10: "IMG-20260822-WA1127.jpg"
+
+};
+
+
+/* =========================
+   OPEN RAKHI PHOTO
+   ========================= */
+
+function showBrother(number) {
+
+  const rakhiPhoto =
+    document.getElementById("rakhiPhoto");
+
+  const galleryPage =
+    document.getElementById("galleryPage");
+
+  const rakhiPage =
+    document.getElementById("rakhiPage");
+
+
+  /* Set corresponding Rakhi photo */
+
+  rakhiPhoto.src = rakhiPhotos[number];
+
+
+  /* Hide main gallery */
+
+  galleryPage.style.display = "none";
+
+
+  /* Show Rakhi page */
+
+  rakhiPage.style.display = "block";
+
+
+  /* Start from top */
+
+  window.scrollTo(0, 0);
 }
 
-function showMessage() {
-  document.getElementById("selectedScreen").style.display = "none";
-  document.getElementById("messageScreen").style.display = "block";
 
-  document.getElementById("specialMessage").innerText =
-    window.currentMessage;
-}
+/* =========================
+   BACK TO MAIN PAGE
+   ========================= */
 
 function goBack() {
-  document.getElementById("messageScreen").style.display = "none";
-  document.querySelector(".container").style.display = "block";
+
+  const galleryPage =
+    document.getElementById("galleryPage");
+
+  const rakhiPage =
+    document.getElementById("rakhiPage");
+
+
+  /* Hide Rakhi page */
+
+  rakhiPage.style.display = "none";
+
+
+  /* Show main gallery */
+
+  galleryPage.style.display = "block";
+
+
+  /* Start gallery from top */
+
+  window.scrollTo(0, 0);
 }
