@@ -1,154 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Happy Raksha Bandhan ❤️</title>
+    <title>My Brothers ❤️</title>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- =========================
-       MAIN GALLERY PAGE
-       ========================= -->
+    <!-- MAIN PAGE -->
+    <div id="mainPage">
 
-  <section id="galleryPage" class="page">
+        <header class="main-header">
+            <div class="rakhi-symbol">🪢</div>
 
-    <div class="heading">
-      <div class="sparkles">✦ ✧ ✦</div>
+            <h1>My Brothers ❤️</h1>
 
-      <h1>Happy Raksha Bandhan ❤️</h1>
-
-      <p class="subtitle">
-        A small surprise for my brothers ✨
-      </p>
-
-      <p class="tap-hint">
-        Tap on your photo ✨
-      </p>
-    </div>
+            <p>Tap a photo to see your Rakhi moment ✨</p>
+        </header>
 
 
-    <div class="brothers-gallery">
+        <!-- INDIVIDUAL BROTHERS PHOTOS -->
+        <div class="brothers-grid">
 
-      <!-- 1 -->
-      <div class="brother-card"
-           onclick="showBrother(1)">
-        <img src="IMG_20260825_160153.jpg"
-             alt="Brother 1">
-      </div>
+            <!-- Brother 1 -->
+            <div class="brother-card" onclick="showRakhi(0)">
+                <img src="IMG_20260825_160153.jpg" alt="Brother 1">
+            </div>
 
+            <!-- Brother 2 -->
+            <div class="brother-card" onclick="showRakhi(1)">
+                <img src="IMG_20260825_155730.jpg" alt="Brother 2">
+            </div>
 
-      <!-- 2 -->
-      <div class="brother-card"
-           onclick="showBrother(2)">
-        <img src="IMG_20260825_155730.jpg"
-             alt="Brother 2">
-      </div>
+            <!-- Brother 3 -->
+            <div class="brother-card" onclick="showRakhi(2)">
+                <img src="IMG_20260825_155654.jpg" alt="Brother 3">
+            </div>
 
+            <!-- Brother 4 -->
+            <div class="brother-card" onclick="showRakhi(3)">
+                <img src="IMG_20241016_151241.jpg" alt="Brother 4">
+            </div>
 
-      <!-- 3 -->
-      <div class="brother-card"
-           onclick="showBrother(3)">
-        <img src="IMG_20260825_155654.jpg"
-             alt="Brother 3">
-      </div>
+            <!-- Brother 5 -->
+            <div class="brother-card" onclick="showRakhi(4)">
+                <img src="IMG_20260825_155714.jpg" alt="Brother 5">
+            </div>
 
+            <!-- Brother 6 -->
+            <div class="brother-card" onclick="showRakhi(5)">
+                <img src="IMG_20260825_155759.jpg" alt="Brother 6">
+            </div>
 
-      <!-- 4 -->
-      <div class="brother-card"
-           onclick="showBrother(4)">
-        <img src="IMG_20241016_151241.jpg"
-             alt="Brother 4">
-      </div>
+            <!-- Brother 7 -->
+            <div class="brother-card" onclick="showRakhi(6)">
+                <img src="IMG_20260823_164054.jpg" alt="Brother 7">
+            </div>
 
+            <!-- Brother 8 -->
+            <div class="brother-card" onclick="showRakhi(7)">
+                <img src="IMG_20260823_164134.jpg" alt="Brother 8">
+            </div>
 
-      <!-- 5 -->
-      <div class="brother-card"
-           onclick="showBrother(5)">
-        <img src="IMG_20260825_155714.jpg"
-             alt="Brother 5">
-      </div>
+            <!-- Brother 9 -->
+            <div class="brother-card" onclick="showRakhi(8)">
+                <img src="IMG-20230210-WA0004.jpg" alt="Brother 9">
+            </div>
 
+            <!-- Brother 10 -->
+            <div class="brother-card" onclick="showRakhi(9)">
+                <img src="IMG_20260823_164041.jpg" alt="Brother 10">
+            </div>
 
-      <!-- 6 -->
-      <div class="brother-card"
-           onclick="showBrother(6)">
-        <img src="IMG_20260825_155759.jpg"
-             alt="Brother 6">
-      </div>
-
-
-      <!-- 7 -->
-      <div class="brother-card"
-           onclick="showBrother(7)">
-        <img src="IMG_20260823_164054.jpg"
-             alt="Brother 7">
-      </div>
-
-
-      <!-- 8 -->
-      <div class="brother-card"
-           onclick="showBrother(8)">
-        <img src="IMG_20260823_164134.jpg"
-             alt="Brother 8">
-      </div>
-
-
-      <!-- 9 -->
-      <div class="brother-card"
-           onclick="showBrother(9)">
-        <img src="IMG-20230210-WA0004.jpg"
-             alt="Brother 9">
-      </div>
-
-
-      <!-- 10 -->
-      <div class="brother-card"
-           onclick="showBrother(10)">
-        <img src="IMG_20260823_164041.jpg"
-             alt="Brother 10">
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- =========================
-       RAKHI PHOTO PAGE
-       ========================= -->
-
-  <section id="rakhiPage" class="page rakhi-page">
-
-    <img id="rakhiPhoto"
-         src=""
-         alt="Raksha Bandhan">
-
-    <div class="message">
-
-      <h2>Happy Raksha Bandhan ❤️</h2>
-
-      <p>
-        Wishing you lots of happiness, success and love always ✨
-      </p>
+        </div>
 
     </div>
 
 
-    <button class="back-button"
-            onclick="goBack()">
-      ← Back to Photos
-    </button>
+    <!-- RAKHI DETAIL PAGE -->
+    <div id="rakhiPage">
 
-  </section>
+        <div class="rakhi-content">
+
+            <div class="detail-rakhi-symbol">🪢</div>
+
+            <img id="rakhiPhoto" src="" alt="Rakhi Photo">
+
+            <h1>Happy Raksha Bandhan ❤️</h1>
+
+            <p class="rakhi-message">
+                Wishing you lots of happiness, love and success! ✨
+            </p>
+
+            <button onclick="goBack()">
+                ← Back to Brothers
+            </button>
+
+        </div>
+
+    </div>
 
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
-</html>
+  </html>
