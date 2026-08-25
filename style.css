@@ -1,256 +1,277 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #fff7f0;
-  color: #5a1f12;
-  min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 10% 10%, rgba(255, 210, 120, 0.35), transparent 25%),
+        radial-gradient(circle at 90% 20%, rgba(255, 150, 170, 0.25), transparent 25%),
+        radial-gradient(circle at 50% 100%, rgba(255, 190, 100, 0.25), transparent 30%),
+        #fff7ed;
+
+    color: #6b2635;
 }
 
 
 /* =========================
-   COMMON PAGE
-   ========================= */
+   MAIN PAGE
+========================= */
 
-.page {
-  min-height: 100vh;
+#mainPage {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 25px 18px 40px;
+}
+
+
+/* HEADER */
+
+.main-header {
+    text-align: center;
+
+    padding: 10px 10px 25px;
+}
+
+.rakhi-symbol {
+    font-size: 38px;
+
+    margin-bottom: 5px;
+}
+
+.main-header h1 {
+    font-size: 30px;
+
+    color: #8b2942;
+
+    margin-bottom: 8px;
+}
+
+.main-header p {
+    font-size: 15px;
+
+    color: #8b5a5a;
 }
 
 
 /* =========================
-   MAIN GALLERY
-   ========================= */
+   BROTHERS GRID
+========================= */
 
-#galleryPage {
-  padding: 25px 15px 40px;
-}
+.brothers-grid {
+    width: 100%;
 
-.heading {
-  text-align: center;
-  margin-bottom: 25px;
-}
+    max-width: 650px;
 
-.sparkles {
-  font-size: 22px;
-  color: #c65d1a;
-  margin-bottom: 8px;
-}
+    margin: 0 auto;
 
-.heading h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #8f3518;
-}
+    display: grid;
 
-.subtitle {
-  font-size: 16px;
-  color: #7a4a32;
-  margin-bottom: 10px;
-}
+    grid-template-columns: repeat(2, 1fr);
 
-.tap-hint {
-  font-size: 14px;
-  font-weight: bold;
-  color: #c65d1a;
-  animation: glow 1.5s infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    opacity: 0.55;
-  }
-
-  to {
-    opacity: 1;
-  }
+    gap: 18px;
 }
 
 
-/* =========================
-   10 PHOTOS
-   2 COLUMNS
-   ========================= */
-
-.brothers-gallery {
-  width: 100%;
-  max-width: 700px;
-  margin: auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 15px;
-}
-
-
-/* Every card is exactly square */
+/* PHOTO CARD */
 
 .brother-card {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+    width: 100%;
 
-  overflow: hidden;
+    aspect-ratio: 1 / 1;
 
-  border-radius: 18px;
+    overflow: hidden;
 
-  background: white;
+    border-radius: 25px;
 
-  box-shadow:
-    0 5px 15px rgba(0, 0, 0, 0.15);
+    background: #f8dfc4;
 
-  cursor: pointer;
+    border: 3px solid rgba(151, 62, 78, 0.15);
 
-  transition: transform 0.2s;
+    box-shadow:
+        0 8px 20px rgba(100, 45, 45, 0.15);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 
-/* Photo fills square */
+/*
+   IMPORTANT:
+
+   contain = full photo visible.
+   So faces won't get cut when original
+   photo is portrait/rectangle.
+*/
 
 .brother-card img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 
-  display: block;
+    object-fit: contain;
 
-  object-fit: cover;
+    background: #f3d7bd;
 
-  object-position: center;
+    display: block;
 }
 
 
-/* Tap animation */
-
 .brother-card:active {
-  transform: scale(0.95);
+    transform: scale(0.96);
+
+    box-shadow:
+        0 4px 10px rgba(100, 45, 45, 0.15);
 }
 
 
 /* =========================
    RAKHI PAGE
-   ========================= */
+========================= */
 
 #rakhiPage {
-  display: none;
+    display: none;
 
-  padding: 25px 15px 40px;
+    min-height: 100vh;
 
-  text-align: center;
+    padding: 30px 18px 40px;
+
+    background:
+        radial-gradient(circle at 20% 15%, rgba(255, 210, 120, 0.35), transparent 25%),
+        radial-gradient(circle at 80% 25%, rgba(255, 150, 170, 0.25), transparent 25%),
+        #fff7ed;
 }
 
-.rakhi-page {
-  min-height: 100vh;
+
+.rakhi-content {
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    text-align: center;
 }
 
+
+.detail-rakhi-symbol {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+
+/* RAKHI PHOTO */
 
 #rakhiPhoto {
-  width: 100%;
-  max-width: 500px;
+    width: 100%;
 
-  max-height: 70vh;
+    max-height: 70vh;
 
-  object-fit: contain;
+    object-fit: contain;
 
-  border-radius: 20px;
+    display: block;
 
-  display: block;
+    margin: 0 auto 20px;
 
-  margin: 20px auto 0;
+    border-radius: 25px;
 
-  box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.2);
+    background: #f3d7bd;
+
+    border: 4px solid rgba(139, 41, 66, 0.15);
+
+    box-shadow:
+        0 10px 30px rgba(100, 45, 45, 0.20);
+}
+
+
+/* MESSAGE */
+
+.rakhi-content h1 {
+    font-size: 30px;
+
+    color: #8b2942;
+
+    margin: 15px 0 10px;
+}
+
+
+.rakhi-message {
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #754b4b;
+
+    margin-bottom: 25px;
+}
+
+
+/* BACK BUTTON */
+
+.rakhi-content button {
+    border: none;
+
+    background: #9b3d52;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(100, 45, 45, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.rakhi-content button:active {
+    transform: scale(0.95);
 }
 
 
 /* =========================
-   MESSAGE
-   ========================= */
-
-.message {
-  margin-top: 22px;
-}
-
-.message h2 {
-  font-size: 27px;
-
-  color: #b23a16;
-
-  margin-bottom: 10px;
-}
-
-.message p {
-  font-size: 16px;
-
-  line-height: 1.5;
-
-  color: #75452f;
-
-  max-width: 450px;
-
-  margin: auto;
-}
-
-
-/* =========================
-   BACK BUTTON
-   ========================= */
-
-.back-button {
-  margin-top: 25px;
-
-  padding: 13px 25px;
-
-  border: none;
-
-  border-radius: 30px;
-
-  background: #c84b1d;
-
-  color: white;
-
-  font-size: 16px;
-
-  font-weight: bold;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 5px 12px rgba(0, 0, 0, 0.18);
-}
-
-.back-button:active {
-  transform: scale(0.95);
-}
-
-
-/* =========================
-   MOBILE
-   ========================= */
+   SMALL PHONES
+========================= */
 
 @media (max-width: 380px) {
 
-  #galleryPage {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+    #mainPage {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 
-  .brothers-gallery {
-    gap: 10px;
-  }
+    .brothers-grid {
+        gap: 12px;
+    }
 
-  .heading h1 {
-    font-size: 25px;
-  }
+    .brother-card {
+        border-radius: 20px;
+    }
 
-  .subtitle {
-    font-size: 14px;
-  }
+    .main-header h1 {
+        font-size: 26px;
+    }
 
-  .tap-hint {
-    font-size: 13px;
+    .rakhi-content h1 {
+        font-size: 26px;
+    }
   }
-}
