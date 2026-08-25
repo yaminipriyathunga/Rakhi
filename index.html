@@ -2,164 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Happy Raksha Bandhan ❤️</title>
 
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #fff7f0;
-      color: #5a1f12;
-      text-align: center;
-    }
-
-    .page {
-      min-height: 100vh;
-      padding: 25px 15px 40px;
-    }
-
-    .title-section {
-      margin-bottom: 25px;
-    }
-
-    .sparkles {
-      font-size: 22px;
-      margin-bottom: 8px;
-      color: #d46a1f;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      font-size: 16px;
-      color: #7a4a32;
-      margin-bottom: 10px;
-    }
-
-    .tap-text {
-      font-size: 14px;
-      color: #c65d1a;
-      font-weight: bold;
-    }
-
-    .brothers-gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .brother-card {
-      background: white;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .brother-card:active {
-      transform: scale(0.96);
-    }
-
-    .brother-card img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .brother-number {
-      padding: 10px;
-      font-weight: bold;
-      color: #8b3a16;
-      font-size: 14px;
-    }
-
-    #photoView {
-      display: none;
-      min-height: 100vh;
-      padding: 25px 15px 40px;
-      background: #fff7f0;
-    }
-
-    #photoView img {
-      width: 100%;
-      max-width: 500px;
-      max-height: 70vh;
-      object-fit: contain;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-      margin-top: 20px;
-    }
-
-    .rakhi-message {
-      margin-top: 22px;
-    }
-
-    .rakhi-message h2 {
-      font-size: 27px;
-      color: #b23a16;
-      margin-bottom: 8px;
-    }
-
-    .rakhi-message p {
-      font-size: 16px;
-      color: #75452f;
-    }
-
-    .back-button {
-      margin-top: 25px;
-      border: none;
-      background: #c84b1d;
-      color: white;
-      padding: 13px 25px;
-      font-size: 16px;
-      border-radius: 30px;
-      cursor: pointer;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.18);
-    }
-
-    .back-button:active {
-      transform: scale(0.96);
-    }
-
-    @media (min-width: 700px) {
-
-      .brothers-gallery {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .brother-card img {
-        height: 280px;
-      }
-
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- PHOTO GALLERY -->
+  <!-- =========================
+       MAIN GALLERY PAGE
+       ========================= -->
 
-  <div class="page" id="gallery">
+  <section id="galleryPage" class="page">
 
-    <div class="title-section">
-
+    <div class="heading">
       <div class="sparkles">✦ ✧ ✦</div>
 
       <h1>Happy Raksha Bandhan ❤️</h1>
@@ -168,148 +26,110 @@
         A small surprise for my brothers ✨
       </p>
 
-      <p class="tap-text">
+      <p class="tap-hint">
         Tap on your photo ✨
       </p>
-
     </div>
 
 
     <div class="brothers-gallery">
 
+      <!-- 1 -->
       <div class="brother-card"
-        onclick="openPhoto('IMG-20260822-WA3233.jpg')">
-
-        <img src="IMG-20260822-WA3233.jpg" alt="Brother 1">
-
-        <div class="brother-number">
-          ❤️ Tap Me
-        </div>
-
+           onclick="showBrother(1)">
+        <img src="IMG_20260825_160153.jpg"
+             alt="Brother 1">
       </div>
 
 
+      <!-- 2 -->
       <div class="brother-card"
-        onclick="openPhoto('IMG-20260822-WA1913.jpg')">
-
-        <img src="IMG-20260822-WA1913.jpg" alt="Brother 2">
-
-        <div class="brother-number">
-          ❤️ Tap Me
-        </div>
-
+           onclick="showBrother(2)">
+        <img src="IMG_20260825_155730.jpg"
+             alt="Brother 2">
       </div>
 
 
+      <!-- 3 -->
       <div class="brother-card"
-        onclick="openPhoto('IMG-20260822-WA8053.jpg')">
-
-        <img src="IMG-20260822-WA8053.jpg" alt="Brother 3">
-
-        <div class="brother-number">
-          ❤️ Tap Me
-        </div>
-
+           onclick="showBrother(3)">
+        <img src="IMG_20260825_155654.jpg"
+             alt="Brother 3">
       </div>
 
 
+      <!-- 4 -->
       <div class="brother-card"
-        onclick="openPhoto('IMG-20260822-WA0358.jpg')">
-
-        <img src="IMG-20260822-WA0358.jpg" alt="Brother 4">
-
-        <div class="brother-number">
-          ❤️ Tap Me
-        </div>
-
+           onclick="showBrother(4)">
+        <img src="IMG_20241016_151241.jpg"
+             alt="Brother 4">
       </div>
 
 
+      <!-- 5 -->
       <div class="brother-card"
-        onclick="openPhoto('IMG-20260822-WA4514.jpg')">
-
-        <img src="IMG-20260822-WA4514.jpg" alt="Brother 5">
-
-        <div class="brother-number">
-          ❤️ Tap Me
-        </div>
-
+           onclick="showBrother(5)">
+        <img src="IMG_20260825_155714.jpg"
+             alt="Brother 5">
       </div>
 
 
+      <!-- 6 -->
       <div class="brother-card"
-        onclick="openPhoto('IMG-20260822-WA3282.jpg')">
-
-        <img src="IMG-20260822-WA3282.jpg" alt="Brother 6">
-
-        <div class="brother-number">
-          ❤️ Tap Me
-        </div>
-
+           onclick="showBrother(6)">
+        <img src="IMG_20260825_155759.jpg"
+             alt="Brother 6">
       </div>
 
 
+      <!-- 7 -->
       <div class="brother-card"
-        onclick="openPhoto('IMG-20260822-WA8037.jpg')">
-
-        <img src="IMG-20260822-WA8037.jpg" alt="Brother 7">
-
-        <div class="brother-number">
-          ❤️ Tap Me
-        </div>
-
+           onclick="showBrother(7)">
+        <img src="IMG_20260823_164054.jpg"
+             alt="Brother 7">
       </div>
 
 
+      <!-- 8 -->
       <div class="brother-card"
-        onclick="openPhoto('IMG-20260822-WA0121.jpg')">
-
-        <img src="IMG-20260822-WA0121.jpg" alt="Brother 8">
-
-        <div class="brother-number">
-          ❤️ Tap Me
-        </div>
-
+           onclick="showBrother(8)">
+        <img src="IMG_20260823_164134.jpg"
+             alt="Brother 8">
       </div>
 
 
+      <!-- 9 -->
       <div class="brother-card"
-        onclick="openPhoto('IMG-20260822-WA0559.jpg')">
-
-        <img src="IMG-20260822-WA0559.jpg" alt="Brother 9">
-
-        <div class="brother-number">
-          ❤️ Tap Me
-        </div>
-
+           onclick="showBrother(9)">
+        <img src="IMG-20230210-WA0004.jpg"
+             alt="Brother 9">
       </div>
 
 
+      <!-- 10 -->
       <div class="brother-card"
-        onclick="openPhoto('IMG-20260822-WA1127.jpg')">
-
-        <img src="IMG-20260822-WA1127.jpg" alt="Brother 10">
-
-        <div class="brother-number">
-          ❤️ Tap Me
-        </div>
-
+           onclick="showBrother(10)">
+        <img src="IMG_20260823_164041.jpg"
+             alt="Brother 10">
       </div>
 
     </div>
 
-  </div>
+  </section>
 
 
 
-  <!-- CLICKED PHOTO PAGE -->
+  <!-- =========================
+       RAKHI PHOTO PAGE
+       ========================= -->
 
-  <div id="photoView">
+  <section id="rakhiPage" class="page rakhi-page">
 
-    <img id="selectedPhoto" src="" alt="Rakhi Photo">
+    <img id="rakhiPhoto"
+         src=""
+         alt="Raksha Bandhan">
 
-
-    <div class="rakhi-message">
+    <div class="message">
 
       <h2>Happy Raksha Bandhan ❤️</h2>
 
@@ -320,205 +140,15 @@
     </div>
 
 
-    <button class="back-button" onclick="goBack()">
+    <button class="back-button"
+            onclick="goBack()">
       ← Back to Photos
     </button>
 
-  </div>
-
-
-
-  <script>
-
-    function openPhoto(photo) {
-
-      document.getElementById("gallery").style.display = "none";
-
-      document.getElementById("photoView").style.display = "block";
-
-      document.getElementById("selectedPhoto").src = photo;
-
-      window.scrollTo(0, 0);
-
-    }
-
-
-    function goBack() {
-
-      document.getElementById("photoView").style.display = "none";
-
-      document.getElementById("gallery").style.display = "block";
-
-      window.scrollTo(0, 0);
-
-    }
-
-  </script>
-
-</body>
-</html>      <div class="brother-card"
-        onclick="selectBrother(
-          
-          'IMG_20240606_053901_120.jpg',
-          'Happy Raksha Bandhan! Wishing you lots of happiness, success and beautiful memories ❤️'
-        )">
-        <img src="IMG_20240606_053901_120.jpg" alt="Second Brother">
-        
-      </div>
-
-      <!-- 3 -->
-      <div class="brother-card"
-        onclick="selectBrother(
-          
-          'IMG-20221005-WA0030.jpg',
-          'Happy Raksha Bandhan! May you always be happy and successful ❤️'
-        )">
-        <img src="IMG-20221005-WA0030.jpg" alt="Brother">
-        
-      </div>
-
-      <!-- 4 -->
-      <div class="brother-card"
-        onclick="selectBrother(
-          
-          'IMG_20241016_151241.jpg',
-          'Wishing you a very Happy Raksha Bandhan ❤️'
-        )">
-        <img src="IMG_20241016_151241.jpg" alt="Brother">
-        
-      </div>
-
-      <!-- 5 -->
-      <div class="brother-card"
-        onclick="selectBrother(
-          
-          'Screenshot_20240427_052435.jpg',
-          'Happy Raksha Bandhan! Keep smiling always ❤️'
-        )">
-        <img src="Screenshot_20240427_052435.jpg" alt="Brother">
-        
-      </div>
-
-      <!-- 6 -->
-      <div class="brother-card"
-        onclick="selectBrother(
-          
-          'Screenshot_20260822_150038.jpg',
-          'May this Raksha Bandhan bring you lots of happiness ❤️'
-        )">
-        <img src="Screenshot_20260822_150038.jpg" alt="Brother">
-        
-      </div>
-
-      <!-- 7 -->
-      <div class="brother-card"
-        onclick="selectBrother(
-          
-          'IMG_20260823_164054.jpg',
-          'Happy Raksha Bandhan ❤️'
-        )">
-        <img src="IMG_20260823_164054.jpg" alt="Brother">
-        
-      </div>
-
-      <!-- 8 -->
-      <div class="brother-card"
-        onclick="selectBrother(
-          
-          'IMG_20260823_164134.jpg',
-          'Always stay happy and blessed. Happy Raksha Bandhan ❤️'
-        )">
-        <img src="IMG_20260823_164134.jpg" alt="Brother">
-        
-      </div>
-
-      <!-- 9 -->
-      <div class="brother-card"
-        onclick="selectBrother(
-          
-          'IMG-20230210-WA0004.jpg',
-          'Sending you lots of love this Raksha Bandhan ❤️'
-        )">
-        <img src="IMG-20230210-WA0004.jpg" alt="Brother">
-        
-      </div>
-
-      <!-- 10 - Youngest -->
-      <div class="brother-card"
-        onclick="selectBrother(
-          
-          'IMG_20260823_164041.jpg',
-          'Happy Raksha Bandhan! ❤️'
-        )">
-        <img src="IMG_20260823_164041.jpg" alt="Youngest Brother">
-        
-      </div>
-
-    </div>
-  </div>
-
-
-  <!-- SELECTED PHOTO SCREEN -->
-  <div id="selectedScreen">
-
-    <img id="selectedPhoto"
-         class="selected-photo"
-         src=""
-         alt="Selected Brother">
-
-    <h2 id="selectedName"></h2>
-
-    <button class="next-btn" onclick="showMessage()">
-      Continue ❤️
-    </button>
-
-  </div>
-
-
-  <!-- RAKHI MESSAGE SCREEN -->
-  <div id="messageScreen">
-
-    <img src="rakhi-scene.jpg"
-         class="rakhi-scene"
-         alt="Raksha Bandhan">
-
-    <div class="message-box" id="specialMessage"></div>
-
-    <button class="back-btn" onclick="goBack()">
-      ← Back to Gallery
-    </button>
-
-  </div>
+  </section>
 
 
   <script src="script.js"></script>
 
 </body>
-</html>      padding: 15px 28px;
-      border: none;
-      border-radius: 30px;
-      background: #f4b400;
-      color: #111;
-      font-size: 17px;
-      font-weight: bold;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-    <h1>Happy Raksha Bandhan ❤️</h1>
-    <p>A special surprise for my dear brothers ✨</p>
-
-    <button onclick="showMessage()">Tap Anywhere 🎁</button>
-  </div>
-
-  <script>
-    function showMessage() {
-      alert("Welcome to your special Raksha Bandhan surprise ❤️");
-    }
-  </script>
-
-</body>
-  </html>
+</html>
