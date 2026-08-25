@@ -1,7 +1,6 @@
-// ======================================
-// RAKHI PHOTOS
-// Same order as the individual photos
-// ======================================
+/* =========================================
+   INDIVIDUAL PHOTO → RAKHI PHOTO MAPPING
+   ========================================= */
 
 const rakhiPhotos = [
 
@@ -28,36 +27,26 @@ const rakhiPhotos = [
 ];
 
 
-// ======================================
-// SHOW RAKHI PAGE
-// ======================================
+/* =========================================
+   OPEN RAKHI PAGE
+   ========================================= */
 
-function showRakhi(index) {
+function openBrother(index) {
 
-    const mainPage = document.getElementById("mainPage");
-
+    const brothersPage = document.getElementById("brothersPage");
     const rakhiPage = document.getElementById("rakhiPage");
+    const rakhiImage = document.getElementById("rakhiImage");
 
-    const rakhiPhoto = document.getElementById("rakhiPhoto");
+    /* Select corresponding Rakhi photo */
+    rakhiImage.src = rakhiPhotos[index];
 
+    /* Hide brothers */
+    brothersPage.style.display = "none";
 
-    // Select corresponding Rakhi photo
+    /* Show Rakhi page */
+    rakhiPage.classList.add("show");
 
-    rakhiPhoto.src = rakhiPhotos[index];
-
-
-    // Hide main page
-
-    mainPage.style.display = "none";
-
-
-    // Show Rakhi page
-
-    rakhiPage.style.display = "block";
-
-
-    // Start Rakhi page from top
-
+    /* Start from top */
     window.scrollTo({
         top: 0,
         behavior: "instant"
@@ -65,29 +54,22 @@ function showRakhi(index) {
 }
 
 
-// ======================================
-// BACK TO MAIN PAGE
-// ======================================
+/* =========================================
+   BACK TO BROTHERS
+   ========================================= */
 
 function goBack() {
 
-    const mainPage = document.getElementById("mainPage");
-
+    const brothersPage = document.getElementById("brothersPage");
     const rakhiPage = document.getElementById("rakhiPage");
 
+    /* Hide Rakhi page */
+    rakhiPage.classList.remove("show");
 
-    // Hide Rakhi page
+    /* Show brothers page */
+    brothersPage.style.display = "block";
 
-    rakhiPage.style.display = "none";
-
-
-    // Show main page
-
-    mainPage.style.display = "block";
-
-
-    // Go to top of main page
-
+    /* Go to top of main page */
     window.scrollTo({
         top: 0,
         behavior: "instant"
