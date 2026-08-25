@@ -1,89 +1,95 @@
-const rakhiPhotos = {
+// ======================================
+// RAKHI PHOTOS
+// Same order as the individual photos
+// ======================================
 
-  1: "IMG-20260822-WA3233.jpg",
+const rakhiPhotos = [
 
-  2: "IMG-20260822-WA1913.jpg",
+    "IMG-20260822-WA3233.jpg",
 
-  3: "IMG-20260822-WA8053.jpg",
+    "IMG-20260822-WA1913.jpg",
 
-  4: "IMG-20260822-WA0358.jpg",
+    "IMG-20260822-WA8053.jpg",
 
-  5: "IMG-20260822-WA4514.jpg",
+    "IMG-20260822-WA0358.jpg",
 
-  6: "IMG-20260822-WA3282.jpg",
+    "IMG-20260822-WA4514.jpg",
 
-  7: "IMG-20260822-WA8037.jpg",
+    "IMG-20260822-WA3282.jpg",
 
-  8: "IMG-20260822-WA0121.jpg",
+    "IMG-20260822-WA8037.jpg",
 
-  9: "IMG-20260822-WA0559.jpg",
+    "IMG-20260822-WA0121.jpg",
 
-  10: "IMG-20260822-WA1127.jpg"
+    "IMG-20260822-WA0559.jpg",
 
-};
+    "IMG-20260822-WA1127.jpg"
 
-
-/* =========================
-   OPEN RAKHI PHOTO
-   ========================= */
-
-function showBrother(number) {
-
-  const rakhiPhoto =
-    document.getElementById("rakhiPhoto");
-
-  const galleryPage =
-    document.getElementById("galleryPage");
-
-  const rakhiPage =
-    document.getElementById("rakhiPage");
+];
 
 
-  /* Set corresponding Rakhi photo */
+// ======================================
+// SHOW RAKHI PAGE
+// ======================================
 
-  rakhiPhoto.src = rakhiPhotos[number];
+function showRakhi(index) {
 
+    const mainPage = document.getElementById("mainPage");
 
-  /* Hide main gallery */
+    const rakhiPage = document.getElementById("rakhiPage");
 
-  galleryPage.style.display = "none";
-
-
-  /* Show Rakhi page */
-
-  rakhiPage.style.display = "block";
+    const rakhiPhoto = document.getElementById("rakhiPhoto");
 
 
-  /* Start from top */
+    // Select corresponding Rakhi photo
 
-  window.scrollTo(0, 0);
+    rakhiPhoto.src = rakhiPhotos[index];
+
+
+    // Hide main page
+
+    mainPage.style.display = "none";
+
+
+    // Show Rakhi page
+
+    rakhiPage.style.display = "block";
+
+
+    // Start Rakhi page from top
+
+    window.scrollTo({
+        top: 0,
+        behavior: "instant"
+    });
 }
 
 
-/* =========================
-   BACK TO MAIN PAGE
-   ========================= */
+// ======================================
+// BACK TO MAIN PAGE
+// ======================================
 
 function goBack() {
 
-  const galleryPage =
-    document.getElementById("galleryPage");
+    const mainPage = document.getElementById("mainPage");
 
-  const rakhiPage =
-    document.getElementById("rakhiPage");
+    const rakhiPage = document.getElementById("rakhiPage");
 
 
-  /* Hide Rakhi page */
+    // Hide Rakhi page
 
-  rakhiPage.style.display = "none";
-
-
-  /* Show main gallery */
-
-  galleryPage.style.display = "block";
+    rakhiPage.style.display = "none";
 
 
-  /* Start gallery from top */
+    // Show main page
 
-  window.scrollTo(0, 0);
+    mainPage.style.display = "block";
+
+
+    // Go to top of main page
+
+    window.scrollTo({
+        top: 0,
+        behavior: "instant"
+    });
 }
